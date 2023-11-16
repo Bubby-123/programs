@@ -1,0 +1,38 @@
+package com.wrapperclass.examples;
+import java.util.Scanner;
+public class AddTwoNumbers {
+
+		public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+
+	        do {
+	                // Get user input for the first number
+	                System.out.print("Enter the first number: ");
+	                double num1 = scanner.nextDouble();
+
+	                // Get user input for the second number
+	                System.out.print("Enter the second number: ");
+	                double num2 = scanner.nextDouble();
+
+	                // Calculate the sum
+	                double sumResult = num1 + num2;
+
+	                // Display the result
+	                System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sumResult);
+
+	                // Ask the user if they want to perform the operation again
+	                System.out.print("Do you want to perform the operation again? (yes/no): ");
+	                String userChoice = scanner.next().toLowerCase();
+
+	                // Check if the user wants to repeat the operation
+	                if (!userChoice.equals("yes")) {
+	                    break; // Exit the loop if the user doesn't want to repeat
+	                }
+
+
+	        } while (true);
+
+	        scanner.close();
+	    }
+
+	}
